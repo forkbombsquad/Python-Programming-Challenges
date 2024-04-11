@@ -33,4 +33,4 @@ def runChallengeCode() -> str:
 def start():
     challenge.printInstructions()
     answerString = runChallengeCode()
-    print(challenge.compareAnswer(answerString, ""))
+    print(challenge.compareAnswer(answerString))
