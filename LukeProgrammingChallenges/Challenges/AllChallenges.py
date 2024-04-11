@@ -1,0 +1,1 @@
+from .Challenge1 import StartChallenge as Challenge1
