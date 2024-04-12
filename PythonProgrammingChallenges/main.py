@@ -12,7 +12,7 @@ from Challenges import AllChallenges
 #
 # Once you're ready to take on the challenges, change the challengeToRun variable below to select which challenge you want to take on.
 #
-challengeToRun = ChallengeNumber.CHALLENGE_3
+challengeToRun = ChallengeNumber.CHALLENGE_1
 
 
 Printer.printProgramStart(challengeToRun)
