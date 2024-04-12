@@ -12,15 +12,17 @@ from Challenges import AllChallenges
 #
 # Once you're ready to take on the challenges, change the challengeToRun variable below to select which challenge you want to take on.
 #
-challengeToRun = ChallengeNumber.CHALLENGE_1
+challengeToRun = ChallengeNumber.CHALLENGE_3
 
 
 Printer.printProgramStart(challengeToRun)
 match challengeToRun:
     case ChallengeNumber.CHALLENGE_1:
-        # Start Challenge1
         AllChallenges.Challenge1.start()
     case ChallengeNumber.CHALLENGE_2:
-        # Start Challenge 2
         AllChallenges.Challenge2.start()
+    case ChallengeNumber.CHALLENGE_3:
+        AllChallenges.Challenge3.start()
+    case ChallengeNumber.CHALLENGE_4:
+        AllChallenges.Challenge4.start()
 Printer.printProgramEnd()
