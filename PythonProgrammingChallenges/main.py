@@ -25,4 +25,6 @@ match challengeToRun:
         AllChallenges.Challenge3.start()
     case ChallengeNumber.CHALLENGE_4:
         AllChallenges.Challenge4.start()
+    case ChallengeNumber.CHALLENGE_5:
+        AllChallenges.Challenge5.start()
 Printer.printProgramEnd()
