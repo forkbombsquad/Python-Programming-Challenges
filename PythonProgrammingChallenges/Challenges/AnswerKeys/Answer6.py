@@ -1,0 +1,1 @@
+ANSWER = ["Wednesday", "Wednesday", "Sunday", "Monday", "Tuesday", "Wednesday", "Friday"]
