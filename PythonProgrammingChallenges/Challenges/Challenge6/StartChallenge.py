@@ -13,7 +13,7 @@ challenge = Challenge(
           "centuryCode = take the first two digits of the year. The century code is a repeating pattern of 4, 2, 0, 6 assigned\n"
           "    to each century ascending. I.e. 01 = 4, 02 = 2, 03 = 0, 04 = 6 ... 19 = 0, 20 = 6, etc.\n"
           "dateNumber = the day of the month. I.e for 2024-04-17, it would be 17.\n"
-          "leapYearCode = if the year is a leap year, you need to subtract 1 from your equation, otherwise leave it unchanged.\n"
+          "leapYearCode = if the year is a leap year and January or February, you need to subtract 1 from your equation, otherwise leave it unchanged.\n"
           "    A year is a leap year if: it is divisible by 4, but NOT if it's also divisible by 100 unless it's ALSO divisible by 400.\n"
           "    For example, the year 2000 is a leap year but 1900 is not.\n"
           "Then, when you have your answer, You can turn that into the day of the week just by knowing that 0=Sunday, 1=Monday ... 6=Saturday.",
