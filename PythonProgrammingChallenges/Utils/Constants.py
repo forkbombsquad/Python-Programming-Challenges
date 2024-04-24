@@ -7,3 +7,4 @@ class ChallengeNumber(StrEnum):
     CHALLENGE_4 = "Challenge Number 4"
     CHALLENGE_5 = "Challenge Number 5"
     CHALLENGE_6 = "Challenge Number 6"
+    CHALLENGE_7 = "Challenge Number 7"
