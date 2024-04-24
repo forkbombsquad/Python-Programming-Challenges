@@ -17,6 +17,15 @@ def runChallengeCode() -> str:
     #
     # Your Code Starts Here
     #
+    i = 1
+    while i < len(inputList)/2+1:
+        answerList.append(inputList[i-1])
+        answerList.append(inputList[len(inputList)-i])
+        i += 1
+
+
+
+
 
     # TODO Challenge 2
 
