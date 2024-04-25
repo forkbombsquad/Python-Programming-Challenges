@@ -93,7 +93,7 @@ def runChallengeCode() -> str:
     #
     # Your Code Ends Here
     #
-    
+
     return str(answerArray)
 
 def start():
