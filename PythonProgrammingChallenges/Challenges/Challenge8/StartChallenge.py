@@ -1,6 +1,7 @@
 from Challenges.Challenge import Challenge
 from Challenges.AnswerKeys import Answer8
 from .Host import Host
+from .Contestant import Contestant
 
 challenge = Challenge.withRange(
     name="Challenge 8 - Monty Hall",
@@ -14,10 +15,10 @@ challenge = Challenge.withRange(
           "Keep their original picks.\n\n"
           "You are provided with a few class files in this folder to help you out structuring your game.\n"
           "You will need to fill in a few of the functions to make them work properly.\n"
-          "You should run the simulation 10,000 times,\n"
+          "You should run the simulation 100,000 times,\n"
           "Always having the contestant switch doors. Record the total number of wins and losses.\n"
           "Then take the total number of wins and divide it by the total number of games to be your answer.\n"
-          "With 10,000 games you should always be within the margin of error if you simulated the game correctly.\n"
+          "With 100,000 games you should always be within the margin of error if you simulated the game correctly.\n"
           "Make sure you convert your answers to floats so that you don't lose your decimal points!\n"
           "Good Luck!",
     answerBottom=Answer8.ANSWER_BOTTOM,
@@ -28,6 +29,8 @@ def runChallengeCode() -> float:
     host = Host()
     answerPercentage = 0.0
 
+    wins = 0
+    losses = 0
     #
     # Your Code Starts Here
     #
