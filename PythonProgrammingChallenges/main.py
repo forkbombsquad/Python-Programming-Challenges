@@ -33,4 +33,6 @@ match challengeToRun:
         AllChallenges.Challenge7.start()
     case ChallengeNumber.CHALLENGE_8:
         AllChallenges.Challenge8.start()
+    case ChallengeNumber.CHALLENGE_9:
+        AllChallenges.Challenge9.start()
 Printer.printProgramEnd()

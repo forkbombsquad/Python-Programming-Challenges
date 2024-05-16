@@ -6,3 +6,4 @@ from .Challenge5 import StartChallenge as Challenge5
 from .Challenge6 import StartChallenge as Challenge6
 from .Challenge7 import StartChallenge as Challenge7
 from .Challenge8 import StartChallenge as Challenge8
+from .Challenge9 import StartChallenge as Challenge9
