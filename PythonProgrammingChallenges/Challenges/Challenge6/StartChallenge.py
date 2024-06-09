@@ -21,15 +21,15 @@ challenge = Challenge(
 )
 
 
-def getYearCode(year: int) -> float:
+def getYearCode(year: int) -> int:
     # yearCode = ((Last Two Digits of Year) + (Last two Digits of Year / 4)) mod 7
     if len(str(year)) > 2:
         last2 = abs(year) % 100
         # TODO this is a problem. You're currently returning: last2 + ((last2 / 4) % 7), because of your order of operations. Also you need to floor it so that there are no decimals, try casting to int before you cast to float.
-        return float(last2 + (last2 / 4) % 7)
+        return int(float((last2 + (last2 / 4)) % 7))
     else:
         # TODO this is a problem. You're currently returning: year + ((year / 4) % 7), because of your order of operations. Also you need to floor it so that there are no decimals, try casting to int before you cast to float.
-        return year + (year / 4) % 7
+        return int((year + (year / 4)) % 7)
 
 
 def getMonthName(month: str) -> str:
@@ -92,19 +92,17 @@ def getMonthCode(month: str) -> int:
 def centuryCode(year: int) -> int:
     # centuryCode = take the first two digits of the year. The century code is a repeating pattern of 4, 2, 0, 6 assigned
     # to each century ascending. I.e. 01 = 4, 02 = 2, 03 = 0, 04 = 6 ... 19 = 0, 20 = 6, etc.
+    centuryPattern = [4, 2, 0, 6]
     first2 = str(year)[:2]
+    first2 = float(first2)
     # check if the first2 are 4, 2, 0 or 6 by running them through an equation
-    """if first2 % 2 == 0 & first2 % 4 == 0:
-        return 2
-    elif first2 % 2 == 0 & first2 % 4 != 0:
-        return 6
-    elif first2 % 3 == 0:
-        return 0
-    else:
-        return 4"""
+    index = int(first2 % 4)
+    index = index - 1
+    return centuryPattern[index]
+
 
     # doing a match-case instead, to make sure my further equation is working
-    match first2:
+    """    match first2:
         case "01":
             return 4
         case "02":
@@ -152,14 +150,17 @@ def centuryCode(year: int) -> int:
         case "23":
             return 0
         case "24":
-            return 6
+            return 6"""
 
 
-def leapYearCode(year: int) -> int:
+def leapYearCode(year: int, month: str) -> int:
     # leapYearCode = if the year is a leap year, you need to subtract 1 from your equation, otherwise leave it unchanged
     # A year is a leap year if: it is divisible by 4, but NOT if it's also divisible by 100 unless it's ALSO divisible by 400
     if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-        return 1
+        if month == "jan" or month == "feb":
+            return 1
+        else:
+            return 0
     else:
         return 0
 
@@ -195,7 +196,7 @@ def runChallengeCode() -> str:
         year = int(brokenDate[0])
         month = getMonthName(brokenDate[1])
         day = int(brokenDate[2])
-        dayOfTheWeek = ((getYearCode(year) + getMonthCode(month) + centuryCode(year) + day - leapYearCode(year)) % 7)
+        dayOfTheWeek = ((getYearCode(year) + getMonthCode(month) + centuryCode(year) + day - leapYearCode(year, month)) % 7)
         daysOfWeek.append(getDayName(int(dayOfTheWeek)))
         i += 1
 
