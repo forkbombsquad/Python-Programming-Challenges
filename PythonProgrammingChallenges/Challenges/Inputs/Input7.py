@@ -2,7 +2,7 @@ from Challenges.Challenge7.Code import Code
 
 TO_ENCRYPT = Code("FOR WHOM THE BELL TOLLS", "GREENHORN")
 
-TO_DERCYPT = Code("YPDDLRVEWLVVYPTUAYAPDD", "CIPHER")
+TO_DECRYPT = Code("YPDDLRVEWLVVYPTUAYAPDD", "CIPHER")
 
 VINGENERE_TABLE = [
 ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
