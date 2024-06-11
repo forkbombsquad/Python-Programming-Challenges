@@ -20,12 +20,6 @@ def runChallengeCode() -> str:
         # Your Code Starts Here
         #
 
-        if currentNumber % 3 == 0:
-            answerString += "FIZZ"
-        if currentNumber % 5 == 0:
-            answerString += "BUZZ"
-        if currentNumber % 3 != 0 and currentNumber % 5 != 0:
-            answerString += str(currentNumber)
         # TODO Challenge 1
 
         #

@@ -34,37 +34,6 @@ def runChallengeCode() -> str:
     #
     # Your Code Starts Here
     #
-    for i in shapesInput:
-        match i[0]:
-            case "C":
-                radius = str(i).strip("C").strip("[").strip("]")
-                shapeArray.append(Circle(float(radius)))
-            case "O":
-                radii = str(i).strip("O").strip("[").strip("]")
-                radii = radii.split(",")
-                radius1 = radii[0]
-                radius2 = radii[1]
-                shapeArray.append(Oval(float(radius1), float(radius2)))
-            case "R":
-                sides = str(i).strip("R").strip("[").strip("]")
-                sides = sides.split(",")
-                side1 = sides[0]
-                side2 = sides[1]
-                shapeArray.append(Rectangle(float(side1), float(side2)))
-            case "S":
-                sides = str(i).strip("S").strip("[").strip("]")
-                shapeArray.append(Square(float(sides)))
-            case "T":
-                baseHeight = str(i).strip("T").strip("[").strip("]")
-                baseHeight = baseHeight.split(",")
-                base = baseHeight[0]
-                height = baseHeight[1]
-                shapeArray.append(Triangle(float(base), float(height)))
-
-
-
-
-
 
     # TODO Challenge 5
 
