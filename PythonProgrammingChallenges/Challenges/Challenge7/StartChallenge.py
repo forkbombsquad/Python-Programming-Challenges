@@ -183,8 +183,8 @@ def runChallengeCode() -> str:
         if encryptXPos > 25:
             encryptXPos = encryptXPos - 25
 
-    encryptMessage += str(table[encryptXPos][encryptYPos])
-    a += 1
+        encryptMessage += str(table[encryptXPos][encryptYPos])
+        a += 1
 
     answerArray.append(encryptMessage)
 
@@ -207,14 +207,16 @@ def runChallengeCode() -> str:
     answerString = ""
 
     x = len(messageToDecrypt)
-    while x > 0:
-        xPos = getNumberLetter(passPhraseToDecrypt[x]) + x
-        yPos = getNumberLetter(messageToDecrypt[x])
-        if xPos > 25:
-            xPos = xPos - 25
 
-        answerString += str(table[xPos][yPos])
-        x -= 1
+    # TODO This while loop is causing an array out of bounds issue
+    # while x > 0:
+    #     xPos = getNumberLetter(passPhraseToDecrypt[x]) + x
+    #     yPos = getNumberLetter(messageToDecrypt[x])
+    #     if xPos > 25:
+    #         xPos = xPos - 25
+    #
+    #     answerString += str(table[xPos][yPos])
+    #     x -= 1
 
     answerArray.append(answerString)
 

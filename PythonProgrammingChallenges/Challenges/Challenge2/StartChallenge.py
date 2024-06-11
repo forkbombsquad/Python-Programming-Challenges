@@ -17,6 +17,9 @@ def runChallengeCode() -> str:
     #
     # Your Code Starts Here
     #
+
+
+    # your old broken code
     i = 1
     while i < len(inputList)/2+1:
         answerList.append(inputList[i-1])
